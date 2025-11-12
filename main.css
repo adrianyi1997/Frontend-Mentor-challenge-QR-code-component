@@ -1,0 +1,79 @@
+/* 字体和外部资源导入 */
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+/* CSS变量和设计令牌 */
+:root {
+  /* 颜色系统 */
+  --slate-900: #1f314f;
+  --slate-500: #68778d;
+  --slate-300: #d5e1ef;
+}
+
+/* 重置和基础样式  */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Outfit", sans-serif;
+  font-size: 15px;
+  line-height: 140%;
+  letter-spacing: 0.2px;
+  text-align: center;
+  color: var(--slate-500);
+}
+
+/* 方式一 */
+body {
+  background-color: var(--slate-300);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* min-height属性很关键，不然看不出<main>包裹内容的居中对齐 */
+  min-height: 100vh;
+}
+
+/* 方式二 */
+/* body {
+  background-color: var(--slate-300);
+}
+
+main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} */
+
+main {
+  width: 320px;
+  height: 499px;
+  background-color: white;
+  padding: 16px 16px 40px 16px;
+  border-radius: 20px;
+  box-shadow: 0 25px 25px rgba(0, 0, 0, 0.0477);
+}
+
+main img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 24px;
+}
+
+main section {
+  padding: 0 16px;
+}
+
+main section h1 {
+  color: var(--slate-900);
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 120%;
+  letter-spacing: 0;
+  margin-bottom: 16px;
+}
